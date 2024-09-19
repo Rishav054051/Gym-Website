@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gym Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file for styling -->
+    <script defer src="script.js"></script> <!-- Link to the JavaScript file for functionality -->
+</head>
+<body>
+
+    <!-- Navbar Section -->
+<header>
+    <nav>
+        <h1>FitLife Gym</h1>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li> <!-- Link to Home Section -->
+            <li><a href="#" onclick="showSection('gallery')">Gallery</a></li> <!-- Link to Gallery Section -->
+            <li><a href="#" onclick="showSection('services')">Services</a></li> <!-- Link to Services Section -->
+            <li><a href="#" onclick="showSection('bmi')">BMI Calculator</a></li> <!-- Link to BMI Calculator Section -->
+            <!-- Dropdown Menu for Contact -->
+            <li class="dropdown">
+                <a href="#" onclick="showSection('contact')" class="dropbtn">Contact</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('contacts')">Contacts</a>
+                    <a href="#" onclick="showSection('get-in-touch')">Get in Touch</a>
+                    <a href="#" onclick="showSection('about-us')">About Us</a>
+                    <a href="#" onclick="showSection('our-vision')">Our Vision</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Home Section -->
+<section id="home" class="content-section">
+    <h2>Get Fit, Stay Strong</h2>
+    <p>Join the best gym in town and achieve your fitness goals.</p>
+    <a href="#" onclick="showSection('services')" class="cta-btn">Explore Our Services</a>
+
+    <!-- Testimonials -->
+    <div class="testimonials-container">
+        <h3>What Our Members Say</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"I've never felt better! The trainers at FitLife Gym are amazing, and I've seen incredible results in just a few months." - <strong>Jane Doe</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The facilities are top-notch, and the community is supportive. It's been a game-changer for my fitness journey." - <strong>John Smith</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"FitLife Gym helped me reach my fitness goals faster than I imagined. The personalized training programs are fantastic!" - <strong>Emily Johnson</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Gallery Section -->
+<section id="gallery" class="content-section">
+    <h2>Our Gym Gallery</h2>
+    <div class="gallery-container">
+        <!-- Rotating Gallery Images -->
+        <div class="gallery">
+            <img src="Images\gym-91849_1920.jpg" alt="Gym Image 1" class="gallery-image">
+            <img src="Images\gym-595597_1920.jpg" alt="Gym Image 2" class="gallery-image">
+            <img src="Images\gym-5977600_1920.jpg" alt="Gym Image 3" class="gallery-image">
+            <img src="Images\man-8545861_1920.jpg" alt="Gym Image 4" class="gallery-image">
+        </div>
+    </div>
+    <!-- Gym Video Section -->
+    <div class="video">
+        <h3>Watch Our Gym in Action</h3>
+        <video controls>
+            <source src="Videos\200657-913478674_small.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <h2>Our Facilities & Services</h2>
+        <div class="services">
+            <!-- Service Cards -->
+            <div class="service-card">
+                <h3>Cardio Zone</h3>
+                <p>Top-of-the-line equipment for your cardio workouts.</p>
+            </div>
+            <div class="service-card">
+                <h3>Strength Training</h3>
+                <p>Build muscle with our free weights and machines.</p>
+            </div>
+            <div class="service-card">
+                <h3>Group Classes</h3>
+                <p>Join fun and motivating group fitness classes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Personal Training</h3>
+                <p>Get one-on-one attention from certified trainers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Calculator Section -->
+    <section id="bmi" class="content-section">
+        <h2>Check Your BMI</h2>
+        <div class="bmi-calculator">
+            <!-- BMI Input and Button -->
+            <label for="height">Height (in meters):</label>
+            <input type="number" id="height" step="0.01" placeholder="Enter your height">
+
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="bmi-result"></p> <!-- Display BMI Result -->
+        </div>
+    </section>
+
+    <section id="contacts" class="content-section">
+        <h2>Contact Details</h2>
+        <p>Here’s how you can get in touch with us:</p>
+        <p><strong>Email:</strong> <a href="mailto:info@fitlifegym.com">info@fitlifegym.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p><strong>Address:</strong> 123 Fitness St, Wellness City, WC 12345</p>
+    </section>
+    
+    <section id="get-in-touch" class="content-section">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or need assistance, feel free to contact us. We're here to help!</p>
+        <p><strong>Email:</strong> <a href="mailto:support@fitlifegym.com">support@fitlifegym.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+0987654321">+0 (987) 654-321</a></p>
+        <p><strong>Address:</strong> 456 Wellness Ave, Healthy Town, HT 67890</p>
+        <p><strong>Contact Form:</strong> <a href="contact-form.html">Fill out our contact form</a></p>
+    </section>
+    
+    <section id="about-us" class="content-section">
+        <h2>About Us</h2>
+        <p>FitLife Gym has been dedicated to improving lives through fitness and wellness. Meet our team of experts and learn about our journey and values.</p>
+        <p>Our mission is to provide exceptional fitness solutions and a supportive community that helps our members reach their goals.</p>
+    </section>
+    
+    <section id="our-vision" class="content-section">
+        <h2>Our Vision</h2>
+        <p>At FitLife Gym, our vision is to become the leading fitness center that fosters a healthy lifestyle through innovation, quality, and community engagement.</p>
+        <p>We aim to continually evolve and adapt to meet the needs of our members, ensuring a supportive and inspiring environment for all.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 FitLife Gym. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

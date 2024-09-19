@@ -1,0 +1,315 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #333; /* Navbar background color */
+    padding: 10px 20px; /* Padding */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: white; /* Title color */
+    margin: 0;
+}
+
+ul {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align items horizontally */
+}
+
+ul li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+ul li a {
+    display: block;
+    color: white; /* Text color */
+    text-align: center;
+    padding: 14px 20px; /* Padding */
+    text-decoration: none; /* Remove underline */
+}
+
+ul li a:hover {
+    background-color: #575757; /* Background color on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #333; /* Match navbar background */
+    color: white; /* Text color */
+    padding: 14px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1; /* Ensure dropdown is on top */
+    top: 100%; /* Position below the dropdown button */
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Background color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #575757; /* Darker background on hover */
+}
+
+
+/* Content Sections */
+.content-section {
+    display: none; /* Hide sections by default */
+    padding: 50px 20px;
+}
+
+/* Show the active section */
+.content-section.active {
+    display: block;
+}
+
+/* Call to Action Button */
+.cta-btn {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Home Section Styles */
+#home {
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.testimonials {
+    margin-top: 40px;
+}
+
+.testimonials h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #333;
+}
+
+.testimonial strong {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+/* Testimonials Container Styles */
+.testimonials-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Container for rotating testimonials */
+.testimonials {
+    display: flex;
+    animation: slide 15s infinite linear;
+    transition: transform 0.5s ease; /* Smooth transition for pause effect */
+}
+
+/* Individual Testimonial Styles */
+.testimonial {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 300px; /* Adjust based on your design */
+    text-align: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for sliding testimonials */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause animation on hover */
+.testimonials-container:hover .testimonials {
+    animation-play-state: paused; /* Pauses the animation */
+}
+
+
+/* Gallery Section Styles */
+#gallery {
+    background-color: #f4f4f4;
+}
+
+/* Gallery Section Styles */
+#gallery {
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow: hidden; /* Ensures no scrollbars appear */
+}
+
+/* Container for rotating gallery */
+.gallery-container {
+    width: 100%;
+    overflow: hidden; /* Hides overflow content */
+    position: relative;
+}
+
+/* Flex container for images */
+.gallery {
+    display: flex;
+    animation: rotate 20s linear infinite; /* Animation for rotating */
+}
+
+/* Individual Gallery Image Styles */
+.gallery-image {
+    flex: 0 0 100%; /* Each image takes full width of the container */
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
+}
+
+/* Keyframes for rotating images */
+@keyframes rotate {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-100%); /* End position */
+    }
+}
+
+/* Video Section Styles */
+.video {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video video {
+    width: 100%; /* Full width within its container */
+    max-width: 800px; /* Adjust as needed for your design */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
+}
+
+
+/* Services Section Styles */
+#services {
+    background-color: #fff;
+}
+
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* BMI Section Styles */
+#bmi {
+    background-color: #f4f4f4;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f8f8f8;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
